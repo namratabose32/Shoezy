@@ -1,8 +1,8 @@
 import React from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { StarIcon, ShoppingBagIcon } from "@heroicons/react/24/solid";
-// import { setAddItemToCart, setOpenCart } from "../../app/CartSlice";
+import { setAddItemToCart, setOpenCart } from "../../app/CartSlice";
 
 const Item = ({
   ifExists,
@@ -16,20 +16,20 @@ const Item = ({
   rating,
   price,
 }) => {
-    // console.log(id)
-//   const dispatch = useDispatch();
+  //   console.log(id)
+  const dispatch = useDispatch();
 
-//   const onAddToCart = () => {
-//     const item = { id, title, text, img, color, shadow, price };
+  const onAddToCart = () => {
+    const item = { id, title, text, img, color, shadow, price };
 
-//     dispatch(setAddItemToCart(item));
-//   };
+    dispatch(setAddItemToCart(item));
+  };
 
-//   const onCartToggle = () => {
-//     dispatch(setOpenCart({
-//         cartState: true
-//     }))
-// }
+  const onCartToggle = () => {
+    dispatch(setOpenCart({
+        cartState: true
+    }))
+}
 
   return (
     <>
